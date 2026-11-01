@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exercise 4.1 – SVG House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..600&display=swap"
+    />
+    <link rel="stylesheet" href="css/style3.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Demonstration 2">
+        <a class="site-title" href="../index3.html">COS30045 Demonstration 2</a>
+        <ul>
+          <li>
+            <a href="../ex4.1-svg-house/index3.html" aria-current="page"
+              >4.1 SVG house</a
+            >
+          </li>
+          <li><a href="../ex4-bar-chart/index3.html">4.3–4.6 Bar chart</a></li>
+          <li><a href="../ex5-multichart/index3.html">5 Multi-chart</a></li>
+          <li>
+            <a href="../ex6-interactivity/index3.html">6 Interactivity</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="wrap">
+      <header class="page-head">
+        <p class="rail">Exercise 4.1</p>
+        <h1>A house drawn with SVG shapes</h1>
+        <p class="lede">
+          Basic SVG shapes positioned on a 1000 × 1000 coordinate grid. Turn on
+          the coordinates to see where each shape starts.
+        </p>
+      </header>
+
+      <section class="chart-panel">
+        <h2>The SVG</h2>
+        <svg
+          class="house"
+          viewBox="0 0 1000 1000"
+          role="img"
+          aria-label="A house with a tree, fence, chimney smoke, clouds and a winding path"
+        >
+          <!-- Sky -->
+          <rect width="1000" height="610" fill="#88C4EA" />
+
+          <!-- Sun -->
+          <circle cx="840" cy="200" r="82" fill="#FFD400" />
+
+          <!-- Clouds -->
+          <ellipse cx="150" cy="120" rx="80" ry="30" fill="#FFFFFF" />
+          <ellipse cx="200" cy="105" rx="50" ry="24" fill="#FFFFFF" />
+          <ellipse cx="420" cy="80" rx="70" ry="25" fill="#FFFFFF" />
+
+          <!-- Birds -->
+          <polyline
+            points="560,120 580,105 600,120 620,105 640,120"
+            fill="none"
+            stroke="#2B2B2B"
+            stroke-width="3"
+            stroke-linejoin="round"
+          />
+
+          <!-- Grass -->
+          <rect y="610" width="1000" height="390" fill="#008000" />
+
+          <!-- Tree trunk -->
+          <rect x="160" y="525" width="41" height="188" fill="#AA5B2D" />
+
+          <!-- Heart-shaped tree top -->
+          <path
+            d="M 180 530
+                 C 130 500, 70 470, 79 415
+                 C 87 365, 145 365, 180 405
+                 C 215 365, 273 365, 281 415
+                 C 290 470, 230 500, 180 530 Z"
+            fill="#268B35"
+          />
+
+          <!-- Chimney and smoke -->
+          <rect
+            x="590"
+            y="240"
+            width="40"
+            height="120"
+            fill="#7A3E1D"
+            stroke="#5C3A1E"
+            stroke-width="4"
+          />
+          <ellipse cx="612" cy="215" rx="18" ry="12" fill="#E8E8E8" />
+          <ellipse cx="628" cy="185" rx="24" ry="14" fill="#F2F2F2" />
+          <ellipse cx="648" cy="150" rx="30" ry="16" fill="#FAFAFA" />
+
+          <!-- Roof -->
+          <polygon
+            points="504,204 302,408 706,408"
+            fill="#C87A34"
+            stroke="#5C3A1E"
+            stroke-width="6"
+            stroke-linejoin="round"
+          />
+
+          <!-- House body -->
+          <rect x="302" y="408" width="404" height="304" fill="#964B13" />
+
+          <!-- Windows group -->
+          <g
+            id="windows"
+            transform="translate(342,448)"
+            fill="#AED6EB"
+            stroke="#5C3A1E"
+            stroke-width="4"
+          >
+            <rect x="0" y="0" width="81" height="81" />
+            <rect x="243" y="0" width="81" height="81" />
+            <line x1="40.5" y1="0" x2="40.5" y2="81" />
+            <line x1="0" y1="40.5" x2="81" y2="40.5" />
+            <line x1="283.5" y1="0" x2="283.5" y2="81" />
+            <line x1="243" y1="40.5" x2="324" y2="40.5" />
+          </g>
+
+          <!-- Door -->
+          <rect
+            x="464"
+            y="549"
+            width="81"
+            height="163"
+            fill="#A44D29"
+            stroke="#3E2410"
+            stroke-width="5"
+          />
+
+          <!-- Door handle -->
+          <circle cx="524" cy="630" r="11" fill="#000000" />
+
+          <!-- Winding path -->
+          <path
+            d="M 464 712 Q 330 730 290 800 Q 250 870 360 930 Q 430 970 440 1000
+                 M 600 1000 Q 590 960 480 915 Q 350 860 380 800 Q 410 750 545 712"
+            fill="none"
+            stroke="#FFAC00"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+
+          <!-- Fence -->
+          <g stroke="#F5F0DC" stroke-width="10" stroke-linecap="round">
+            <line x1="740" y1="640" x2="740" y2="720" />
+            <line x1="780" y1="640" x2="780" y2="720" />
+            <line x1="820" y1="640" x2="820" y2="720" />
+            <line x1="860" y1="640" x2="860" y2="720" />
+            <line x1="900" y1="640" x2="900" y2="720" />
+            <line x1="940" y1="640" x2="940" y2="720" />
+            <line x1="980" y1="640" x2="980" y2="720" />
+          </g>
+          
+          <polyline
+            points="740,668 980,668"
+            fill="none"
+            stroke="#F5F0DC"
+            stroke-width="8"
+          />
+
+          <polyline
+            points="740,698 980,698"
+            fill="none"
+            stroke="#F5F0DC"
+            stroke-width="8"
+          />
+
+          <!-- Sign -->
+          <text
+            x="768"
+            y="590"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="48"
+            font-weight="bold"
+            fill="#2B2B2B"
+          >
+            House
+          </text>
+
+          <!-- Coordinate annotations (hidden) -->
+          <g id="annotations" display="none">
+            <circle cx="302" cy="408" r="3" />
+            <text x="312" y="436">(302,408) 404×304</text>
+            <circle cx="706" cy="712" r="3" />
+            <text x="716" y="722">(706,712)</text>
+            <circle cx="840" cy="200" r="3" />
+            <text x="840" y="315" text-anchor="middle">(840,200) r=82</text>
+            <circle cx="150" cy="120" r="3" />
+            <text x="150" y="175" text-anchor="middle">
+              (150,120) rx=80 ry=30
+            </text>
+            <circle cx="900" cy="640" r="3" />
+            <text x="900" y="628" text-anchor="middle">(900,640)</text>
+            <circle cx="900" cy="720" r="3" />
+            <text x="900" y="748" text-anchor="middle">(900,720)</text>
+            <circle cx="560" cy="120" r="3" />
+            <circle cx="580" cy="105" r="3" />
+            <circle cx="600" cy="120" r="3" />
+            <circle cx="620" cy="105" r="3" />
+            <circle cx="640" cy="120" r="3" />
+            <text x="480" y="150">(560,120) (580,105) …</text>
+            <circle cx="504" cy="204" r="3" />
+            <text x="504" y="188" text-anchor="middle">(504,204)</text>
+            <circle cx="706" cy="408" r="3" />
+            <text x="716" y="398">(706,408)</text>
+            <circle cx="302" cy="712" r="3" />
+            <text x="312" y="722">(302,712)</text>
+            <text x="292" y="398" text-anchor="end">(302,408)</text>
+            <circle cx="464" cy="712" r="3" />
+            <text x="452" y="740" text-anchor="end">M 464,712</text>
+            <path class="guide" d="M 464 712 L 330 730 L 290 800" />
+            <circle cx="330" cy="730" r="3" />
+            <text x="320" y="750" text-anchor="end">Q 330,730</text>
+            <circle cx="290" cy="800" r="3" />
+            <text x="278" y="805" text-anchor="end">290,800</text>
+            <circle cx="768" cy="590" r="3" />
+            <text x="768" y="560">x=768 y=590</text>
+          </g>
+        </svg>
+        <label class="toggle"
+          ><input type="checkbox" id="toggle-coords" /> Show coordinates</label
+        >
+      </section>
+
+      <h2 class="section-title">Coordinate system</h2>
+      <p>
+        The origin (0,0) is the top-left corner of the SVG, x grows to the right
+        and y grows downward. Each screenshot marks one shape's coordinates
+        against its code.
+      </p>
+      <div class="figures">
+        <figure>
+          <img
+            src="images/annotated-rect.png"
+            alt="Annotated screenshot of the rect element"
+          />
+          <figcaption>
+            rect: <code>x="302" y="408" width="404" height="304"</code> (house
+            body)
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/annotated-circle.png"
+            alt="Annotated screenshot of the circle element"
+          />
+          <figcaption>
+            circle: <code>cx="840" cy="200" r="82"</code> (sun)
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/annotated-ellipse.png"
+            alt="Annotated screenshot of the ellipse element"
+          />
+          <figcaption>
+            ellipse: <code>cx="150" cy="120" rx="80" ry="30"</code> (cloud)
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/annotated-line.png"
+            alt="Annotated screenshot of the line element"
+          />
+          <figcaption>
+            line: <code>x1="900" y1="640" x2="900" y2="720"</code> (fence post)
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/annotated-polyline.png"
+            alt="Annotated screenshot of the polyline element"
+          />
+          <figcaption>
+            polyline:
+            <code>points="560,120 580,105 600,120 620,105 640,120"</code>
+            (birds)
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/annotated-polygon.png"
+            alt="Annotated screenshot of the polygon element"
+          />
+          <figcaption>
+            polygon: <code>points="504,204 302,408 706,408"</code> (roof)
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/annotated-path.png"
+            alt="Annotated screenshot of the path element"
+          />
+          <figcaption>
+            path: <code>M 464 712 Q 330 730 290 800 …</code> (garden path)
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/annotated-text.png"
+            alt="Annotated screenshot of the text element"
+          />
+          <figcaption>
+            text: <code>x="768" y="590"</code> (sign), the baseline starts at
+            this point
+          </figcaption>
+        </figure>
+      </div>
+
+      <section class="chart-panel">
+        <h2>Group element</h2>
+        <p>
+          The <code>&lt;g&gt;</code> element groups shapes so that attributes
+          such as <code>fill</code>, <code>stroke</code> and
+          <code>transform</code> are applied to all children at once.
+        </p>
+        <p>
+          Here <code>#windows</code> uses <code>translate(342,448)</code>, so
+          both windows are drawn from local (0,0) and (243,0) and moved together
+          into place.
+        </p>
+      </section>
+
+      <section class="chart-panel">
+        <h2>DOM view</h2>
+        <img
+          src="images/dom-screenshot.png"
+          alt="Browser developer tools showing the SVG elements in the DOM"
+        />
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap rail-grid">
+        <p class="name rail">Ngo Gia Hy</p>
+        <p>Student ID: 106217563, COS30045 Data Visualisation</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("toggle-coords")
+        .addEventListener("change", (e) => {
+          document
+            .getElementById("annotations")
+            .setAttribute("display", e.target.checked ? "inline" : "none");
+        });
+    </script>
+  </body>
+</html>

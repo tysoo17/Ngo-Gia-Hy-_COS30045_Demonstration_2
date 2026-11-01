@@ -1,0 +1,25 @@
+/* ex6 rules; chart recolouring lives in base3.css */
+.filter-row {
+    margin-bottom: var(--s4);
+}
+
+.filter-label {
+    margin: 0 0 var(--s2);
+    color: var(--ink-2);
+    font-size: var(--t-small);
+}
+
+#filters_screen,
+#filters_size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s2);
+}
+
+#histogram {
+    margin-top: var(--s5);
+}
+
+.tooltip {
+    pointer-events: none;
+}

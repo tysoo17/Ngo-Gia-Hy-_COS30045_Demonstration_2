@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D3 basics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..600&display=swap">
+  <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Demonstration 2">
+      <a class="site-title" href="../index3.html">COS30045 Demonstration 2</a>
+      <ul>
+        <li><a href="../ex4.1-svg-house/index3.html">4.1 SVG house</a></li>
+        <li><a href="../ex4-bar-chart/index3.html" aria-current="page">4.3–4.6 Bar chart</a></li>
+        <li><a href="../ex5-multichart/index3.html">5 Multi-chart</a></li>
+        <li><a href="../ex6-interactivity/index3.html">6 Interactivity</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <header class="page-head">
+      <p class="rail">Exercise 4.2</p>
+      <h1>D3 basics</h1>
+      <p class="lede">D3 selects the first h1, div and svg on the page and changes them.</p>
+    </header>
+    <section class="chart-panel">
+      <h2>Selected by D3</h2>
+      <div class="container">
+        <p>My name is Ngo Gia Hy</p>
+      </div>
+    </section>
+    <section class="chart-panel">
+      <h2>Drawn by D3</h2>
+      <svg width="300" height="120"></svg>
+      <p class="source">D3 appended this rect and set its fill with .style().</p>
+    </section>
+    <p><a href="index3.html">Back to the bar chart</a></p>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap rail-grid">
+      <p class="name rail">Ngo Gia Hy</p>
+      <p>Student ID: 106217563, COS30045 Data Visualisation</p>
+    </div>
+  </footer>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/d3-basics.js"></script>
+</body>
+</html>
